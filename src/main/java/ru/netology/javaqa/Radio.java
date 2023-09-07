@@ -41,14 +41,14 @@ public class Radio {
         return currentWave;
     }
 
-    public void setCurrentWave(int newCurrentWave) {
+    public void setCurrentWave(int currentWave) {
         if (currentWave < 0) {
             return;
         }
         if (currentWave > 9) {
             return;
         }
-        currentWave = newCurrentWave;
+        this.currentWave = currentWave;
     }
 
 
@@ -56,15 +56,16 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int newCurrentVolume) {
+    public void setCurrentVolume(int currentVolume) {
         if (currentVolume > 100) {
             return;
         }
         if (currentVolume < 0) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentVolume = currentVolume;
     }
+
 }
 
 
