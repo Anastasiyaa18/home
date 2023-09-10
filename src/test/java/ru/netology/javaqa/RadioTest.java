@@ -261,5 +261,65 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+    @Test
+    public void switchWave() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentWave(8);
+
+        int expected = 8;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void switchMaxWave() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentWave(9);
+
+        int expected = 9;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void switchMoreMaxWave() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentWave(10);
+
+        int expected = 0;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void switchMinWave() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentWave(0);
+
+        int expected = 0;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void switchWaveNewRadio() {
+        Radio radio = new Radio(45);
+
+        radio.setCurrentWave(16);
+
+        int expected = 16;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 
 }
